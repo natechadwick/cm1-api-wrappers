@@ -1,0 +1,9 @@
+Percussion CM1 .Net API Client
+
+This project provides a C# Wrapper Library around the CM1 REST API's for use in .NET applications
+with the intent of making the API more immediately accessible to .NET developers. 
+
+To use this library in your project simply build the source and reference the assembly in your .NET project. 
+
+NOTE:  This is a work in progress and is still incomplete.  Check the issue list for what needs completed.  
+Any contributions appreciated, I maintain this project in my spare time. 

@@ -1,0 +1,32 @@
+GET
+{
+    "exportHeader": {
+        "exportDate": "2012-04-28T16:07:15.128-04:00",
+        "systemVersion": "Version 2.6.0  Build 201204X16 (421)"
+    },
+    "asset": {
+        "id": "16777215-101-311",
+        "path": "/Assets/uploads/Widget Development Quick Start.doc",
+        "name": "Widget Development Quick Start.doc",
+        "type": "percFileAsset",
+        "revision": 1,
+        "createDate": "2012-04-28T13:09:55.000-04:00",
+        "lastModifiedDate": "2012-04-28T13:09:58.000-04:00",
+        "publishDate": null,
+        "createdBy": "Admin",
+        "lastModifier": "Admin",
+        "language": "en-us",
+        "fields": {
+            "field": [
+                {
+                    "name": "displaytitle",
+                    "value": "Widget Development Quick Start.doc"
+                },
+                {
+                    "name": "usage",
+                    "value": null
+                }
+            ]
+        }
+    }
+}

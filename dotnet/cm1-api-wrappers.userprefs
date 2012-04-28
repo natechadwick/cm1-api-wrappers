@@ -1,0 +1,72 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="class/Content/Model/ImportAsset.cs">
+    <Files>
+      <File FileName="class/Content/ContentService.cs" Line="109" Column="4" />
+      <File FileName="class/Content/Model/AssetSummary.cs" Line="48" Column="2" />
+      <File FileName="notes/json-outputs.txt" Line="30" Column="1" />
+      <File FileName="class/Content/Model/AssetFieldTypeSurrogate.cs" Line="1" Column="3" />
+      <File FileName="class/Content/Model/AssetFieldEntry.cs" Line="21" Column="21" />
+      <File FileName="class/Content/Model/AssetPaths.cs" Line="3" Column="34" />
+      <File FileName="class/Content/Model/AssetFields.cs" Line="4" Column="43" />
+      <File FileName="tests/Content/ContentServiceTests.cs" Line="22" Column="4" />
+      <File FileName="class/RestClientBase.cs" Line="37" Column="1" />
+      <File FileName="class/Content/Model/ExportAsset.cs" Line="16" Column="4" />
+      <File FileName="class/Content/Model/ExportHeader.cs" Line="25" Column="3" />
+      <File FileName="tests/Content/Model/AssetPathTests.cs" Line="20" Column="1" />
+      <File FileName="tests/Content/Model/ExportHeaderTests.cs" Line="19" Column="35" />
+      <File FileName="class/Content/Model/ImportAsset.cs" Line="13" Column="2" />
+      <File FileName="class/Content/Model/CreateAsset.cs" Line="10" Column="2" />
+      <File FileName="README" Line="10" Column="1" />
+      <File FileName="class/AssemblyInfo.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="CM1-API-Wrappers" expanded="True" selected="True">
+            <Node name="class" expanded="True">
+              <Node name="Content" expanded="True">
+                <Node name="Model" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True">
+          <Node name="CM1-API-Wrappers" expanded="True" selected="True">
+            <Node name="Percussion" expanded="True">
+              <Node name="CM1" expanded="True">
+                <Node name="API" expanded="True">
+                  <Node name="Content" expanded="True">
+                    <Node name="ContentServiceTests" expanded="True" />
+                    <Node name="Model" expanded="True">
+                      <Node name="ExportHeaderTests" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/natechadwick/projects/cm1-api-wrappers/dotnet/class/RestClientBase.cs" line="27" />
+      <Breakpoint file="/home/natechadwick/projects/cm1-api-wrappers/dotnet/tests/Content/ExportTests.cs" line="26" />
+      <Breakpoint file="/home/natechadwick/projects/cm1-api-wrappers/dotnet/class/Content/Export.cs" line="45" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
