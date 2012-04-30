@@ -1,0 +1,69 @@
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+group = 'com.github.percussion.cm1.api'
+version = '1.0'
+sourceCompatibility = 1.6
+	
+repositories {
+	mavenRepo urls: "file://" + System.getProperty('user.home') + "/.m2/repository/"
+	mavenCentral()
+}
+
+dependencies {
+	
+	  runtime(
+		   ['com.sun.jersey:jersey-bundle:1.5'],
+		   ['com.sun.jersey:jersey-core:1.5'],
+		   ['com.sun.jersey:jersey-client:1.5'],
+		   ['com.sun.jersey:jersey-json:1.5'],
+		   ['commons-lang:commons-lang:2.6'],
+		   ['commons-codec:commons-codec:1.6'],
+		   ['commons-logging:commons-logging:1.1.1'],
+		   ['commons-io:commons-io:2.0.1'],
+		   ['commons-discovery:commons-discovery:0.5']
+		)
+	
+	
+	   testCompile(
+			['junit:junit:4.8.2'],
+			['com.sun.jersey.jersey-test-framework:jersey-test-framework-core:1.5'],
+			['com.sun.jersey.jersey-test-framework:jersey-test-framework-external:1.5'],
+			['com.sun.jersey.jersey-test-framework:jersey-test-framework-grizzly:1.5']
+		)
+	   
+	   testRuntime(
+		   ['com.sun.jersey:jersey-bundle:1.5'],
+		   ['com.sun.jersey:jersey-core:1.5'],
+		   ['com.sun.jersey:jersey-client:1.5'],
+		   ['com.sun.jersey:jersey-json:1.5'],
+		   ['commons-lang:commons-lang:2.6'],
+		   ['commons-codec:commons-codec:1.6'],
+		   ['commons-logging:commons-logging:1.1.1'],
+		   ['commons-io:commons-io:2.0.1'],
+		   ['commons-discovery:commons-discovery:0.5']
+		)
+	}
+	
+	/*
+	 * Define the common source sets structure
+	 */
+	sourceSets {
+		main {
+			java {
+			   srcDirs =['src/main']
+			}
+			resources {
+				srcDir 'resources/main'
+			}
+		}
+		test {
+			java {
+				srcDir 'src/test'
+			}
+			resources {
+				srcDir 'resources/test'
+			}
+		}
+	}
