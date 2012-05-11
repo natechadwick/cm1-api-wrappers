@@ -14,6 +14,7 @@ namespace Percussion.CM1.API.Content
 	{
 		public static string EXPORT_URI = "/Rhythmyx/content/";
 		public static string EXPORT_ASSET_URI = "Assets/";
+		public static string CREATE_ASSET_URI = EXPORT_ASSET_URI;
 		public static string EXPORT_PATH_URI = "pathlist/";
 		
 		public ContentService(string server, string uid, string pass){
@@ -103,11 +104,42 @@ namespace Percussion.CM1.API.Content
 			return asset;
 		}
 		
-		//TODO: Code Me!
-		public void CreateAsset( ){
-		
+		/// <summary>
+		/// Creates the asset.
+		/// </summary>
+		/// <param name='asset'>
+		/// Asset.
+		/// </param>
+		/// <exception cref='InvalidOperationException'>
+		/// Is thrown when an operation cannot be performed.
+		/// </exception>
+		public void CreateAsset(CreateAsset asset ){
+	
+			if(asset == null)
+				throw new InvalidOperationException("Asset is required");
+			
+				
+			string url = BuildRequestURL(EXPORT_URI + CREATE_ASSET_URI);
+			HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;	
+			
+			request.Accept = "application/json";
+			request.ContentType = "application/json";
+			request.Credentials = GetCredential(url);  
+			request.Method = "POST";
+			
+			// Get response  
+			using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)  
+			{  	
+				if(response.StatusCode != HttpStatusCode.OK)
+					throw new Exception(response.StatusCode.ToString());
+			}  
+			
 		}
 		
+		
+		public void CreateBlogPost(BlogPostAsset post){
+		
+		}
 		
 	}
 }

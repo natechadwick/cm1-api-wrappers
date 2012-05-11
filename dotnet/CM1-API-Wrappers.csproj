@@ -9,7 +9,6 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Percussion.CM1.API</RootNamespace>
     <AssemblyName>cm1-api-wrappers</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,6 +56,28 @@
     <Compile Include="tests\Content\ContentServiceTests.cs" />
     <Compile Include="class\Content\Model\CreateAsset.cs" />
     <Compile Include="class\Content\Model\ImportAsset.cs" />
+    <Compile Include="class\Content\Model\BlogPostAsset.cs" />
+    <Compile Include="class\Content\Model\AssetTypes.cs" />
+    <Compile Include="class\Content\Model\BaseAssetType.cs" />
+    <Compile Include="class\Content\Model\ArchiveList.cs" />
+    <Compile Include="class\Content\Model\IAsset.cs" />
+    <Compile Include="class\Content\Model\NotFinishedYetException.cs" />
+    <Compile Include="class\Content\Model\CalendarAsset.cs" />
+    <Compile Include="class\Content\Model\CategoryList.cs" />
+    <Compile Include="class\Content\Model\EventAsset.cs" />
+    <Compile Include="class\Content\Model\FileAsset.cs" />
+    <Compile Include="class\Content\Model\FlashAsset.cs" />
+    <Compile Include="class\Content\Model\FormAsset.cs" />
+    <Compile Include="class\Content\Model\HTMLAsset.cs" />
+    <Compile Include="class\Content\Model\ImageAsset.cs" />
+    <Compile Include="class\Content\Model\ImageAutoList.cs" />
+    <Compile Include="class\Content\Model\LoginAsset.cs" />
+    <Compile Include="class\Content\Model\PageAutoList.cs" />
+    <Compile Include="class\Content\Model\RegistrationAsset.cs" />
+    <Compile Include="class\Content\Model\RichTextAsset.cs" />
+    <Compile Include="class\Content\Model\RSSAsset.cs" />
+    <Compile Include="class\Content\Model\SimpleTextAsset.cs" />
+    <Compile Include="class\Content\Model\TagList.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
