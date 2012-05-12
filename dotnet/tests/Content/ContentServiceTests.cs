@@ -18,6 +18,25 @@ namespace Percussion.CM1.API.Content
 		}
 		
 		[Test]
+		public void testCreateBlogPost(){
+		
+			ContentService service = new ContentService(TEST_URL,TEST_UID,TEST_PASS);
+			
+			BlogPostAsset p = new BlogPostAsset(service.GetEmptyAsset(AssetTypes.BlogPostAsset));
+			
+			p.AuthorName="nate";
+			p.DisplayTitle="Test Post";
+			p.PostBody="<div class=\"rxbodyfield\"><b>.NET Unit Test</b></div>";
+			p.Asset.Name = "new-test-blog";
+			p.Asset.Path = "/Assets/uploads/";
+			p.Asset.Language = "en-us";
+			
+			Console.WriteLine(p.ToCreateAsset().ToString());
+			service.CreateAsset(p.ToCreateAsset());
+	
+		}
+		
+		[Test]
 		public void testExport(){
 			ContentService export = new ContentService(TEST_URL,TEST_UID,TEST_PASS);
 			

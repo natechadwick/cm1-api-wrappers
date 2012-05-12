@@ -78,6 +78,7 @@
     <Compile Include="class\Content\Model\RSSAsset.cs" />
     <Compile Include="class\Content\Model\SimpleTextAsset.cs" />
     <Compile Include="class\Content\Model\TagList.cs" />
+    <Compile Include="tests\Content\BlogPostAssetTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

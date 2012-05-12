@@ -17,6 +17,11 @@ namespace Percussion.CM1.API.Content.Model
 		public ExportAsset ()
 		{
 		}
+		
+		public ExportAsset(AssetSummary asset, ExportHeader header){
+			this.Asset = asset;
+			this.Header = header;
+		}
 
 		/// <summary>
 		/// Returns a <see cref="System.String"/> that represents the current <see cref="Percussion.CM1.API.Content.Model.ExportAsset"/>.

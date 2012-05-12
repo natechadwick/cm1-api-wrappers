@@ -16,6 +16,7 @@ namespace Percussion.CM1.API.Content
 		public static string EXPORT_ASSET_URI = "Assets/";
 		public static string CREATE_ASSET_URI = EXPORT_ASSET_URI;
 		public static string EXPORT_PATH_URI = "pathlist/";
+		public static string EMPTY_ASSET_URI = "empty/";
 		
 		public ContentService(string server, string uid, string pass){
 			this.ServerURL = server;
@@ -104,6 +105,34 @@ namespace Percussion.CM1.API.Content
 			return asset;
 		}
 		
+		
+		
+		public CreateAsset GetEmptyAsset(string assetType){
+			if(assetType==null)
+				throw new ArgumentNullException();
+			
+			string url = BuildRequestURL(EXPORT_URI + EMPTY_ASSET_URI + assetType);
+			HttpWebRequest request = WebRequest.Create(url) as HttpWebRequest;	
+			
+			request.Accept = "application/json";
+			request.ContentType = "application/json";
+			request.Credentials = GetCredential(url);  
+			request.Method = "GET";
+			
+			CreateAsset asset = null;
+			// Get response  
+			using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)  
+			{
+				//Marshal the response into an asset object.
+				 DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(CreateAsset));
+				
+       			 object result= serializer.ReadObject(response.GetResponseStream());
+       			 asset = result as CreateAsset;
+				
+			}
+			
+			return asset;
+		}
 		/// <summary>
 		/// Creates the asset.
 		/// </summary>
@@ -135,11 +164,6 @@ namespace Percussion.CM1.API.Content
 			}  
 			
 		}
-		
-		
-		public void CreateBlogPost(BlogPostAsset post){
-		
-		}
-		
+	
 	}
 }

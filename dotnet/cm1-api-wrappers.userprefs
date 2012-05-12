@@ -1,29 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="class/Content/Model/ImportAsset.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="tests/Content/ContentServiceTests.cs">
     <Files>
-      <File FileName="class/Content/ContentService.cs" Line="109" Column="4" />
-      <File FileName="class/Content/Model/AssetSummary.cs" Line="1" Column="1" />
-      <File FileName="notes/json-outputs.txt" Line="1" Column="1" />
-      <File FileName="class/Content/Model/AssetFieldTypeSurrogate.cs" Line="1" Column="3" />
-      <File FileName="class/Content/Model/AssetFieldEntry.cs" Line="1" Column="1" />
-      <File FileName="class/Content/Model/AssetPaths.cs" Line="1" Column="1" />
-      <File FileName="class/Content/Model/AssetFields.cs" Line="1" Column="1" />
-      <File FileName="tests/Content/ContentServiceTests.cs" Line="1" Column="1" />
-      <File FileName="class/RestClientBase.cs" Line="1" Column="1" />
-      <File FileName="class/Content/Model/ExportAsset.cs" Line="1" Column="1" />
-      <File FileName="class/Content/Model/ExportHeader.cs" Line="1" Column="1" />
-      <File FileName="tests/Content/Model/AssetPathTests.cs" Line="1" Column="1" />
-      <File FileName="tests/Content/Model/ExportHeaderTests.cs" Line="1" Column="1" />
-      <File FileName="class/Content/Model/ImportAsset.cs" Line="13" Column="2" />
-      <File FileName="class/Content/Model/CreateAsset.cs" Line="1" Column="1" />
-      <File FileName="README" Line="1" Column="1" />
-      <File FileName="class/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="tests/Content/ContentServiceTests.cs" Line="26" Column="4" />
+      <File FileName="class/Content/Model/BlogPostAsset.cs" Line="9" Column="776" />
+      <File FileName="class/Content/Model/CreateAsset.cs" Line="4" Column="35" />
+      <File FileName="class/Content/Model/AssetFields.cs" Line="56" Column="4" />
+      <File FileName="class/Content/Model/AssetFieldEntry.cs" Line="11" Column="30" />
+      <File FileName="class/Content/Model/BaseAssetType.cs" Line="7" Column="3" />
+      <File FileName="tests/Content/BlogPostAssetTests.cs" Line="8" Column="3" />
+      <File FileName="class/Content/ContentService.cs" Line="151" Column="50" />
+      <File FileName="class/Content/Model/IAsset.cs" Line="10" Column="3" />
+      <File FileName="class/Content/Model/ExportAsset.cs" Line="26" Column="2" />
+      <File FileName="class/RestClientBase.cs" Line="27" Column="1" />
+      <File FileName="class/Content/Model/ExportHeader.cs" Line="9" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="CM1-API-Wrappers" expanded="True" selected="True">
+          <Node name="CM1-API-Wrappers" expanded="True">
             <Node name="class" expanded="True">
               <Node name="Content" expanded="True">
                 <Node name="Model" expanded="True" />
@@ -31,7 +26,7 @@
             </Node>
             <Node name="tests" expanded="True">
               <Node name="Content" expanded="True">
-                <Node name="Model" expanded="True" />
+                <Node name="ContentServiceTests.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -42,7 +37,19 @@
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
         <State expanded="True">
-          <Node name="CM1-API-Wrappers" selected="True" />
+          <Node name="CM1-API-Wrappers" expanded="True">
+            <Node name="Percussion" expanded="True">
+              <Node name="CM1" expanded="True">
+                <Node name="API" expanded="True">
+                  <Node name="Content" expanded="True">
+                    <Node name="ContentServiceTests" expanded="True">
+                      <Node name="testCreateBlogPost" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
@@ -58,6 +65,7 @@
       <Breakpoint file="/home/natechadwick/projects/cm1-api-wrappers/dotnet/class/RestClientBase.cs" line="27" />
       <Breakpoint file="/home/natechadwick/projects/cm1-api-wrappers/dotnet/tests/Content/ExportTests.cs" line="26" />
       <Breakpoint file="/home/natechadwick/projects/cm1-api-wrappers/dotnet/class/Content/Export.cs" line="45" />
+      <Breakpoint file="/home/natechadwick/projects/cm1-api-wrappers/dotnet/tests/Content/ContentServiceTests.cs" line="27" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

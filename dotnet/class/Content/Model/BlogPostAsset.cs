@@ -17,6 +17,8 @@ namespace Percussion.CM1.API.Content.Model
 		public static string POSTBODY = "postbody";
 		public static string AUTHORNAME = "authorname";
 				
+		//Private argumentless ctor
+		private BlogPostAsset(){}
 		
 		/// <summary>
 		/// Gets or sets the display title.
@@ -25,7 +27,16 @@ namespace Percussion.CM1.API.Content.Model
 		/// <value>
 		/// The display title.
 		/// </value>
-		public String DisplayTitle {get;set;}
+		public String DisplayTitle {
+			get{
+				AssetFieldEntry e = Asset.Fields.FindField(DISPLAYTITLE);		
+				return e != null ? e.Value : "";
+			}
+			
+			set{
+				Asset.Fields.UpdateField( new AssetFieldEntry(DISPLAYTITLE,value));
+			}
+		}
 		
 		/// <summary>
 		/// Maps to the postbody of the asset
@@ -33,7 +44,16 @@ namespace Percussion.CM1.API.Content.Model
 		/// <value>
 		/// The post body.
 		/// </value>
-		public String PostBody{get;set;}
+		public String PostBody{
+			get{
+				AssetFieldEntry e = Asset.Fields.FindField(POSTBODY);		
+				return e != null ? e.Value : "";
+			}
+			
+			set{
+				Asset.Fields.UpdateField( new AssetFieldEntry(POSTBODY,value));
+			}
+		}
 		
 		/// <summary>
 		/// Gets or sets the name of the author.
@@ -42,10 +62,35 @@ namespace Percussion.CM1.API.Content.Model
 		/// <value>
 		/// The name of the author.
 		/// </value>
-		public String AuthorName{get;set;}
+		public String AuthorName{
+			
+			get{
+				AssetFieldEntry e = Asset.Fields.FindField(AUTHORNAME);		
+				return e != null ? e.Value : "";
+			}
+			
+			set{
+				Asset.Fields.UpdateField( new AssetFieldEntry(AUTHORNAME,value));
+			}
+		}
 		
 		public BlogPostAsset (ExportAsset asset)
 		{
+			if(asset.Asset.Type != AssetTypes.BlogPostAsset)
+				throw new InvalidOperationException("Expected " + AssetTypes.BlogPostAsset + " but got " + asset.Asset.Type);
+			
+			this.Asset = asset.Asset;
+			this.Header = asset.Header;
+			
+		}
+		
+		public BlogPostAsset (CreateAsset asset)
+		{
+			if(asset.Asset.Type != AssetTypes.BlogPostAsset)
+				throw new InvalidOperationException("Expected " + AssetTypes.BlogPostAsset + " but got " + asset.Asset.Type);
+			
+			this.Asset = asset.Asset;
+			this.Header = asset.Header;
 			
 		}
 	}
