@@ -46,8 +46,12 @@ namespace Percussion.CM1.API.Content.Model
 		[DataMember(Name="fields")]
 		public AssetFields Fields {get;set;}
 		
+		/// <summary>
+		/// Initializes a new instance of the <see cref="Percussion.CM1.API.Content.Model.AssetSummary"/> class.
+		/// </summary>
 		public AssetSummary ()
 		{
+			Fields = new AssetFields();
 		}
 		
 	}

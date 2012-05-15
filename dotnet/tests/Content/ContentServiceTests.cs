@@ -30,6 +30,10 @@ namespace Percussion.CM1.API.Content
 			p.Asset.Name = "new-test-blog";
 			p.Asset.Path = "/Assets/uploads/";
 			p.Asset.Language = "en-us";
+			p.Asset.CreateDate = DateTime.Now.ToUniversalTime().ToString();
+			p.Asset.CreatedBy = "unittest";
+			p.Asset.LastModifiedDate = DateTime.Now.ToUniversalTime().ToString();
+			p.Asset.LastModifier = "unittest";
 			
 			Console.WriteLine(p.ToCreateAsset().ToString());
 			service.CreateAsset(p.ToCreateAsset());

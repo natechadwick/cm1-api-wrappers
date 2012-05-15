@@ -6,11 +6,17 @@ namespace Percussion.CM1.API.Content.Model
 	[DataContract]
 	public class AssetFields
 	{
+		private AssetFieldEntry[] fields;
+		
 		[DataMember(Name="field")]
-		public AssetFieldEntry[] FieldList {get;set;}
-			
+		public AssetFieldEntry[] FieldList {get{return fields;} set{fields = value;}}
+		
+		/// <summary>
+		/// Initializes a new instance of the <see cref="Percussion.CM1.API.Content.Model.AssetFields"/> class.
+		/// </summary>
 		public AssetFields ()
 		{
+			FieldList = new AssetFieldEntry[]{};
 		}
 		
 		/// <summary>
@@ -49,10 +55,16 @@ namespace Percussion.CM1.API.Content.Model
 			foreach (AssetFieldEntry d in FieldList){
 					if( d.Name.Equals(f.Name)){
 						FieldList.SetValue(f,i);
-						break;
+						return;
 					}
 				i++;
 			}
+			
+			//if we got this far then we will add the field - and as these are tiny, just resize the array
+			Array.Resize<AssetFieldEntry>(ref fields, fields.Length +1);
+	
+			FieldList.SetValue(f,fields.Length-1);
+
 			
 		}
 	}

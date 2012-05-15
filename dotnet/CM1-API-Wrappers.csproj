@@ -79,6 +79,21 @@
     <Compile Include="class\Content\Model\SimpleTextAsset.cs" />
     <Compile Include="class\Content\Model\TagList.cs" />
     <Compile Include="tests\Content\BlogPostAssetTests.cs" />
+    <Compile Include="tests\Content\Model\TagListTests.cs" />
+    <Compile Include="tests\Content\Model\SimpleTextAssetTests.cs" />
+    <Compile Include="tests\Content\Model\RSSAssetTests.cs" />
+    <Compile Include="tests\Content\Model\RegistrationAssetTests.cs" />
+    <Compile Include="tests\Content\Model\PageAutoListTests.cs" />
+    <Compile Include="tests\Content\Model\LoginAssetTests.cs" />
+    <Compile Include="tests\Content\Model\ImageAutoListTests.cs" />
+    <Compile Include="tests\Content\Model\ImageAssetTests.cs" />
+    <Compile Include="tests\Content\Model\HTMLAssetTests.cs" />
+    <Compile Include="tests\Content\Model\FormAssetTests.cs" />
+    <Compile Include="tests\Content\Model\FlashAssetTests.cs" />
+    <Compile Include="tests\Content\Model\FileAssetTests.cs" />
+    <Compile Include="tests\Content\Model\EventAssetTests.cs" />
+    <Compile Include="tests\Content\Model\CategoryListTests.cs" />
+    <Compile Include="tests\Content\Model\CalendarAssetTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

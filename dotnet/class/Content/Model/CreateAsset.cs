@@ -19,7 +19,15 @@ namespace Percussion.CM1.API.Content.Model
 			this.Header = header;
 		}
 		
-		public CreateAsset(){}
+		/// <summary>
+		/// Initializes a new instance of the <see cref="Percussion.CM1.API.Content.Model.CreateAsset"/> class.
+		/// 
+		/// Header and Asset will be non null.
+		/// </summary>
+		public CreateAsset(){
+			this.Header = new ExportHeader();
+			this.Asset = new AssetSummary();	
+		}
 		
 			/// <summary>
 		/// Returns a <see cref="System.String"/> that represents the current <see cref="Percussion.CM1.API.Content.Model.ExportAsset"/>.
