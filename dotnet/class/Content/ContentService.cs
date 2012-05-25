@@ -155,12 +155,30 @@ namespace Percussion.CM1.API.Content
 			request.ContentType = "application/json";
 			request.Credentials = GetCredential(url);  
 			request.Method = "POST";
-			
+		
+			byte[] byteData = UTF8Encoding.UTF8.GetBytes(asset.ToString());  
+ 			
+			// Set the content length in the request headers  
+			request.ContentLength = byteData.Length;  
+  
+			// Write data  
+			using (Stream postStream = request.GetRequestStream())  
+			{  
+    			postStream.Write(byteData, 0, byteData.Length);  
+			}  
+  
 			// Get response  
 			using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)  
 			{  	
 				if(response.StatusCode != HttpStatusCode.OK)
 					throw new Exception(response.StatusCode.ToString());
+			
+				 // Get the response stream  
+    			StreamReader reader = new StreamReader(response.GetResponseStream());  
+  
+			    // Console application output  
+    			Console.WriteLine(reader.ReadToEnd());
+			
 			}  
 			
 		}

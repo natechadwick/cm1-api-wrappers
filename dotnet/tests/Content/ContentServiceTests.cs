@@ -27,8 +27,8 @@ namespace Percussion.CM1.API.Content
 			p.AuthorName="nate";
 			p.DisplayTitle="Test Post";
 			p.PostBody="<div class=\"rxbodyfield\"><b>.NET Unit Test</b></div>";
-			p.Asset.Name = "new-test-blog";
-			p.Asset.Path = "/Assets/uploads/";
+			
+			p.Asset.Path = "/Assets/uploads/new-test-blog-" + DateTime.Now.Ticks.ToString();
 			p.Asset.Language = "en-us";
 			p.Asset.CreateDate = DateTime.Now.ToUniversalTime().ToString();
 			p.Asset.CreatedBy = "unittest";
